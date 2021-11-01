@@ -21,6 +21,12 @@ registerApplication({
   activeWhen: ["/react-multiples"],
 });
 
+registerApplication({
+  name: "@mc/react-parcel",
+  app: () => System.import("@mc/react-parcel"),
+  activeWhen: (location) => location.pathname === '/react-parcel'
+});
+
 start({
   urlRerouteOnly: true,
 });
